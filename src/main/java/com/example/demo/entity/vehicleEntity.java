@@ -21,7 +21,8 @@ public class vehicleEntity{
     public String getName(){
         return name;
     }
-    public void setName(Long id){
-        this.id = id;
+    public void setName(String name){
+        this.name = name;
     }
+    public String get
 }
