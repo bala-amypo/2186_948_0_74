@@ -14,7 +14,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 // You need to change the port as per your server
                 .servers(List.of(
-                        new Server().url("https://localhost:9001/demo")
+                        new Server().url("https://localhos")
                 ));
         }
 }
