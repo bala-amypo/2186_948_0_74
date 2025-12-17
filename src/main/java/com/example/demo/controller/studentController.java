@@ -13,4 +13,9 @@ public class studentController{
     public List<studentEntity>getAll(){
        return service.getAll();
     }
+
+    @PostMapping("/add")
+    public studentEntity addStudent(){
+        
+    }
 }
