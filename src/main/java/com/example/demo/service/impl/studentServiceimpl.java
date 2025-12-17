@@ -15,4 +15,8 @@ public List<studentEntity> getAll(){
     return repo.findAll();
 }
 
+public studentEntity addStudent(studentEntity student){
+    return 
+}
+
 }
