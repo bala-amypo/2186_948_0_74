@@ -37,6 +37,6 @@ public StudentEntity updateByid( Long id, StudentEntity newstu){
 public StudentEntity deleteById(Long id){
     StudentEntity data = getById(id);
     repo.deleteById(id);
-    return "Deleted Successfully";
+    return "Deleted Successfully !";
 }
 }
