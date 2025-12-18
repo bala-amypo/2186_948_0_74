@@ -16,7 +16,7 @@ public List<studentEntity> getAll(){
 }
 
 public studentEntity addStudent(studentEntity student){
-    return 
+    return repo.save(student);
 }
 
 }
