@@ -8,11 +8,10 @@ public interface StudentService {
     StudentEntity saveStudent(StudentEntity student);
 
     List<StudentEntity> getAllStudents();
-    
+
     StudentEntity getById(Long id);
 
-    StudentEntity updateByid( Long id, StudentEntity newstu);
+    StudentEntity updateByid(Long id, StudentEntity newstu);
 
     String deleteById(Long id);
-
 }

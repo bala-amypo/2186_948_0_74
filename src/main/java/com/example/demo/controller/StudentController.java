@@ -3,8 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.service.StudentService;
 
-import jakarta.validation.Valid;
-
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,30 +13,32 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    private StudentService studentService;
+    private StudentService service;
 
     @PostMapping
-    public StudentEntity save(@Valid @RequestBody StudentEntity student) {
-        return studentService.saveStudent(student);
+    public StudentEntity saveStudent(@RequestBody StudentEntity student) {
+        return service.saveStudent(student);
     }
 
     @GetMapping
-    public List<StudentEntity> getAll() {
-        return studentService.getAllStudents();
+    public List<StudentEntity> getAllStudents() {
+        return service.getAllStudents();
     }
 
-    @GetMapping("/get/{id}")
-    public StudentEntity getById(@PathVariable Long id){
+    @GetMapping("/{id}")
+    public StudentEntity getStudentById(@PathVariable Long id) {
         return service.getById(id);
     }
-    @PutMapping("/update{id}")
-    public StudentEntity updateByid(@PathVariable Long id,@Valid @RequestBody StudentEntity newstu){
-        return service.updateById(id,newstu);
+
+    @PutMapping("/{id}")
+    public StudentEntity updateStudent(
+            @PathVariable Long id,
+            @RequestBody StudentEntity student) {
+        return service.updateByid(id, student);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteById(@PathVariable Long id){
-       return  service.deleteById(id);
-        
+    @DeleteMapping("/{id}")
+    public String deleteStudent(@PathVariable Long id) {
+        return service.deleteById(id);
     }
 }
