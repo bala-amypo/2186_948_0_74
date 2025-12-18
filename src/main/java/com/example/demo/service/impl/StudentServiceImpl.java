@@ -6,7 +6,7 @@ import com.example.demo.service.StudentService;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import com.example.demo.exception.*;
 import java.util.List;
 
 @Service
@@ -26,6 +26,6 @@ public class StudentServiceImpl implements StudentService {
     }
     @Override
     public StudentEntity getById(Long id){
-    return repo.findById(id).orElseThrow() -> new StudentNotFoundExce[
+    return repo.findById(id).orElseThrow(() -> throw new StudentNotFoundException("Student id not found"));
 
 }
