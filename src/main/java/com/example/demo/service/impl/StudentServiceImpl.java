@@ -24,4 +24,8 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentEntity> getAllStudents() {
         return studentRepo.findAll();
     }
+    @Override
+    public StudentEntity getById(Long id){
+    return repo.findById(id).orElseThrow() -> new StudentNotFoundExce[
+
 }

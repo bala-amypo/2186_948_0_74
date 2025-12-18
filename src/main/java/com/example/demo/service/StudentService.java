@@ -8,4 +8,7 @@ public interface StudentService {
     StudentEntity saveStudent(StudentEntity student);
 
     List<StudentEntity> getAllStudents();
+    
+    StudentEntity getById(Long id);
+
 }
