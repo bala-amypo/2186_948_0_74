@@ -11,4 +11,8 @@ public interface StudentService {
     
     StudentEntity getById(Long id);
 
+    StudentEntity updateByid( Long id, StudentEntity newstu);
+
+    void deleteById(Long id);
+
 }
