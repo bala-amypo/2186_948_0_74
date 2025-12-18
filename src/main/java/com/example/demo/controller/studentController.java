@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
-import jakarta.validation.valid;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.entity.*;
@@ -19,7 +21,7 @@ public class studentController{
     }
 
     @PostMapping("/add")
-    public studentEntity addStudent(@valid @RequestBody studentEntity student){
+    public studentEntity addStudent(@Valid @RequestBody studentEntity student){
       return service.addStudent(student);
     }
 }
